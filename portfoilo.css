@@ -1,0 +1,301 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+
+    line-height: 1.6;
+    color: #ffffff;
+    background: #000000;
+    text-align: justify;
+    text-align: left;
+}
+
+
+header {
+    background-color: #000000;
+    color: #fff;
+    padding: 1rem 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+}
+
+.nav-links li {
+    margin-left: 1.5rem;
+}
+
+.nav-links a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #f39c12;
+}
+
+/* Hero Section Styling */
+.hero {
+    background: url('3227297_43534.jpg') no-repeat center center/cover;
+    color: #000000;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: relative;
+}
+
+.hero-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+
+/* Image Styling */
+.hero-image img {
+    width: 200px; /* Adjust image width */
+    height: 250px; /* Rectangular shape */
+    object-fit: cover; /* Ensure image fills the rectangle */
+    border-radius: 8px; /* Slight border radius for smooth edges */
+    border: 2px solid #000000; /* Optional: border around the image */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add shadow for depth */
+}
+
+/* Highlighted Text */
+.highlight {
+    color: #000000;
+}
+
+/* Button Styling */
+.btn {
+    display: inline-block;
+    padding: 0.75rem 1.5rem;
+    background-color: #007bff;
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #0056b3;
+}
+
+
+section {
+    padding: 4rem 0;
+    text-align: center;
+}
+
+h2 {
+    margin-bottom: 2rem;
+    font-size: 2.5rem;
+    color: #a78d8d;
+}
+
+/* Experience & Education Section */
+.experience-education-container {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    flex-wrap: wrap;
+}
+
+.experience, .education {
+    flex: 1;
+    min-width: 300px;
+}
+
+.experience h3, .education h3 {
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+    color: #ffffff;
+}
+
+.card {
+    background: #000000;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+    text-align: left;
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.card h4 {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+    color: #000000;
+}
+
+.card p {
+    margin-bottom: 0.5rem;
+    font-size: 0.9rem;
+    color: #ffffff;
+}
+.card ul {
+    margin-left: 1.5rem;
+    list-style: disc;
+    color: #ffffff;
+}
+.skills, .projects {
+    background: #f4f4f4;
+}
+
+.skill-list, .project-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.skill, .project {
+    background: #000000;
+    margin: 1rem;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    width: 250px;
+    transition: transform 0.3s ease;
+}
+
+.skill:hover, .project:hover {
+    transform: translateY(-5px);
+}
+/* General Section Styling */
+.projects-certifications {
+    padding: 4rem 2rem;
+    background-color: #ffffff;
+    text-align: center;
+}
+
+.projects-certifications h2 {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    color: #000000;
+}
+
+/* Container Layout */
+.container {
+    display: flex;
+    justify-content: space-between;
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Projects and Certifications Section */
+.projects, .certifications {
+    flex: 1;
+    min-width: 300px;
+    text-align: left;
+}
+
+.projects h3, .certifications h3 {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+    color: #000000;
+}
+
+/* Card Design */
+.card {
+    background: #000000;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card h4 {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+    color: #ffffff;
+}
+
+.card p {
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+    color: #ffffff;
+}
+
+.card a {
+    text-decoration: none;
+    color: #007bff;
+    font-weight: 600;
+}
+
+.card a:hover {
+    text-decoration: underline;
+}
+
+.card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+    }
+}
+#contact {
+    text-align: center; /* Aligns text to the left */
+    /* You can also use 'center' or 'right' based on your preference */
+}
+
+#contact h2 {
+    text-align: center; /* Centering the heading might look better */
+}
+
+#contact p {
+    text-align: center; /* Aligns paragraph text to the left */
+    margin-bottom: 10px; /* Adds some space between paragraphs */
+}
+
+#contact a {
+    text-decoration: none; /* Removes underline from links */
+    color: #0077cc; /* Sets the link color (optional) */
+}
+
+#contact a:hover {
+    text-decoration: underline; /* Underlines the link on hover (optional) */
+}
+
+
+footer {
+    background: #333;
+    color: #fff;
+    text-align: center;
+    padding: 1rem 0;
+}
