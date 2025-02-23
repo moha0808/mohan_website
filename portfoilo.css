@@ -7,17 +7,16 @@
 }
 
 body {
-
     line-height: 1.6;
     color: #ffffff;
-    background: #000000;
+    /* background: #1a1a1a; */
     text-align: justify;
-    text-align: left;
+    /* background-image: url(image\ 3.png); */
 }
 
-
 header {
-    background-color: #000000;
+    /* background-image: url(image\ 3.png); */
+    background-color: #1a1a1a;
     color: #fff;
     padding: 1rem 0;
     position: sticky;
@@ -56,14 +55,16 @@ header {
 
 /* Hero Section Styling */
 .hero {
-    background: url('3227297_43534.jpg') no-repeat center center/cover;
-    color: #000000;
+    /* background: linear-gradient(135deg, #1a1a1a, #333); */
+    background-image: url(9881637_4232288.jpg);
+    color: #fff;
     height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
     text-align: center;
     position: relative;
+    overflow: hidden;
 }
 
 .hero-content {
@@ -71,28 +72,67 @@ header {
     flex-direction: column;
     align-items: center;
     gap: 1rem;
+    animation: fadeIn 2s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
 }
 
 /* Image Styling */
 .hero-image img {
-    width: 200px; /* Adjust image width */
-    height: 250px; /* Rectangular shape */
-    object-fit: cover; /* Ensure image fills the rectangle */
-    border-radius: 8px; /* Slight border radius for smooth edges */
-    border: 2px solid #000000; /* Optional: border around the image */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add shadow for depth */
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 4px solid #f39c12;
+    box-shadow: 0 0 20px rgba(243, 156, 18, 0.5);
+    animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-20px); }
+}
+
+/* About Section Styling */
+#about {
+    padding: 4rem 0;
+    text-align: center;
+    /* background-image: url(download.jpg); */
+    background-color: #1a1a1a;
+}
+
+.about-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+.about-image {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 4px solid #f39c12;
+    box-shadow: 0 0 20px rgba(243, 156, 18, 0.5);
 }
 
 /* Highlighted Text */
 .highlight {
-    color: #000000;
+    color: #f39c12;
 }
 
 /* Button Styling */
 .btn {
     display: inline-block;
     padding: 0.75rem 1.5rem;
-    background-color: #007bff;
+    background-color: #f39c12;
     color: #fff;
     text-decoration: none;
     font-weight: bold;
@@ -101,9 +141,8 @@ header {
 }
 
 .btn:hover {
-    background-color: #0056b3;
+    background-color: #e67e22;
 }
-
 
 section {
     padding: 4rem 0;
@@ -113,7 +152,13 @@ section {
 h2 {
     margin-bottom: 2rem;
     font-size: 2.5rem;
-    color: #a78d8d;
+    color: #f39c12;
+    animation: slideIn 1s ease-in-out;
+}
+
+@keyframes slideIn {
+    from { transform: translateX(-100%); opacity: 0; }
+    to { transform: translateX(0); opacity: 1; }
 }
 
 /* Experience & Education Section */
@@ -134,167 +179,146 @@ h2 {
 .experience h3, .education h3 {
     font-size: 1.8rem;
     margin-bottom: 1.5rem;
-    color: #ffffff;
+    color: #f39c12;
 }
 
 .card {
-    background: #000000;
+    background: #333;
     border-radius: 8px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     padding: 1.5rem;
     margin-bottom: 1.5rem;
     text-align: left;
-    transition: transform 0.3s ease;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .card:hover {
-    transform: translateY(-5px);
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
 }
 
 .card h4 {
     font-size: 1.2rem;
     margin-bottom: 0.5rem;
-    color: #000000;
+    color: #f39c12;
 }
 
 .card p {
     margin-bottom: 0.5rem;
     font-size: 0.9rem;
-    color: #ffffff;
+    color: #fff;
 }
+
 .card ul {
     margin-left: 1.5rem;
     list-style: disc;
-    color: #ffffff;
-}
-.skills, .projects {
-    background: #f4f4f4;
+    color: #fff;
 }
 
-.skill-list, .project-list {
+/* Skills Section */
+.skills {
+    background: #ffffff;
+    padding: 4rem 0;
+}
+
+.skill-list {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-}
-
-.skill, .project {
-    background: #000000;
-    margin: 1rem;
-    padding: 1.5rem;
-    border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    width: 250px;
-    transition: transform 0.3s ease;
-}
-
-.skill:hover, .project:hover {
-    transform: translateY(-5px);
-}
-/* General Section Styling */
-.projects-certifications {
-    padding: 4rem 2rem;
-    background-color: #ffffff;
-    text-align: center;
-}
-
-.projects-certifications h2 {
-    font-size: 2.5rem;
-    margin-bottom: 2rem;
-    color: #000000;
-}
-
-/* Container Layout */
-.container {
-    display: flex;
-    justify-content: space-between;
-    gap: 2rem;
+    gap: 1rem;
     max-width: 1200px;
     margin: 0 auto;
 }
 
-/* Projects and Certifications Section */
-.projects, .certifications {
-    flex: 1;
-    min-width: 300px;
-    text-align: left;
-}
-
-.projects h3, .certifications h3 {
-    font-size: 1.8rem;
-    margin-bottom: 1rem;
-    color: #000000;
-}
-
-/* Card Design */
-.card {
-    background: #000000;
-    border: 1px solid #ddd;
+.skill {
+    background: #333;
+    padding: 1rem 2rem;
     border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    color: #fff;
+    font-weight: 600;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.skill:hover {
+    transform: translateY(-5px);
+    background-color: #f39c12;
+}
+
+/* Projects Section */
+.projects {
+    background: #1a1a1a;
+    padding: 4rem 0;
+}
+
+.project-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.project {
+    background: #333;
     padding: 1.5rem;
-    margin-bottom: 1.5rem;
+    border-radius: 8px;
+    width: 300px;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.card h4 {
+.project:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+.project h4 {
     font-size: 1.2rem;
     margin-bottom: 0.5rem;
-    color: #ffffff;
+    color: #f39c12;
 }
 
-.card p {
-    font-size: 1rem;
-    margin-bottom: 0.5rem;
-    color: #ffffff;
+.project p {
+    font-size: 0.9rem;
+    color: #fff;
 }
 
-.card a {
+.project a {
     text-decoration: none;
-    color: #007bff;
+    color: #f39c12;
     font-weight: 600;
 }
 
-.card a:hover {
+.project a:hover {
     text-decoration: underline;
 }
 
-.card:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
-}
-
-/* Responsive Design */
-@media (max-width: 768px) {
-    .container {
-        flex-direction: column;
-    }
-}
+/* Contact Section */
 #contact {
-    text-align: center; /* Aligns text to the left */
-    /* You can also use 'center' or 'right' based on your preference */
+    background: #333;
+    padding: 4rem 0;
 }
 
 #contact h2 {
-    text-align: center; /* Centering the heading might look better */
+    color: #f39c12;
 }
 
 #contact p {
-    text-align: center; /* Aligns paragraph text to the left */
-    margin-bottom: 10px; /* Adds some space between paragraphs */
+    color: #fff;
 }
 
 #contact a {
-    text-decoration: none; /* Removes underline from links */
-    color: #0077cc; /* Sets the link color (optional) */
+    text-decoration: none;
+    color: #f39c12;
 }
 
 #contact a:hover {
-    text-decoration: underline; /* Underlines the link on hover (optional) */
+    text-decoration: underline;
 }
 
-
+/* Footer Section */
 footer {
-    background: #333;
+    background: #1a1a1a;
     color: #fff;
     text-align: center;
     padding: 1rem 0;
